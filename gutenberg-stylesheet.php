@@ -182,37 +182,3 @@ add_theme_support('wp-block-styles');
 add_theme_support('align-wide');
 add_theme_support('responsive-embeds');
 
-/*add width options to customiser*/
-function customize_register( $wp_customize ) {
-    $wp_customize->add_section( 
-        'gutenberg_style_settings', array(
-            'title' => __( 'Gutenberg Style Settings' ),
-            'priority'   => 20,
-        ) 
-    );
-    $wp_customize->add_setting(  
-        'max_width', array(
-            'default' => '',
-            'type' => 'text',
-            'capability' => 'edit_theme_options'
-        )
-    );
-    $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize, // WP_Customize_Manager
-            'max_width', array(
-                'label'      => __( 'Max Content Width (please specify units e.g. px or rem)', 'textdomain' ),
-                'priority'   => 10,
-                'section'    => 'gutenberg_style_settings',
-                'type'       => 'text',
-            )
-        )
-    );
-};
-add_action( 'customize_register', 'customize_register' );
-
-/*stuff to add: 
-create a plugin settings page from which users can set:
-- default widths
-- gutenberg colours?
-*/

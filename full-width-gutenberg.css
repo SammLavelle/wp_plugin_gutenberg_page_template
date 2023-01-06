@@ -65,7 +65,6 @@
     --space--b: calc(var(--space-b) * -1);
     --space--c: calc(var(--space-c) * -1);
     --space--d: calc(var(--space-d) * -1);
-
 }
 /*-- UNIVERSAL SPACING --*/
 .template-full-width-gutenberg{
@@ -79,16 +78,12 @@
     --space-margin-tb: var(--space-g); /* between elements */
     --space-padding-tb: var(--space-g); /* within elements with background colours */
     --space-panel-padding-tb: var(--space-b); /* top and bottom padding for panels and cards */
-
 }
-
-
 
 /* ----- ELEMENTS ----- */
 .template-full-width-gutenberg h1, .template-full-width-gutenberg h2, .template-full-width-gutenberg h3, .template-full-width-gutenberg h4, .template-full-width-gutenberg h5, .template-full-width-gutenberg h6 {
 	margin-top: 0;
 	margin-bottom: 0;
-
 }
 .template-full-width-gutenberg p, 
 .template-full-width-gutenberg li,
@@ -131,8 +126,6 @@
 .wp-block-buttons>.wp-block-button {
 	margin: 0;
 }
-
-
 /* ----- LAYOUTS ----- */
 body{
     margin: 0;
@@ -142,33 +135,6 @@ body{
     margin: 0;
     display: block;
 }
-.container--with-sidebar{
-    width: 100%;
-    max-width: var(--width-wide);
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 5fr 2fr;
-    padding: var(--space-gutter) 0;
-    gap:  var(--space-gutter);
-    --space-margin-tb: var(--space-c);
-    --space-padding-tb: var(--space-c);
-}
-
-.container--narrow{
-    max-width: var(--width-default);
-    margin: var(--space-margin-tb) auto;
-
-}
-@media(max-width: 1024px){
-    .container--with-sidebar{
-        grid-template-columns: 1fr;
-    }
-    .container--aside{
-        padding: 0 var(--space-gutter);
-        max-width: 500px;
-    }
-}
-
 
 /* -- gutenberg overrides -- */
 /*-- widths &  left/right padding & margins --*/
@@ -190,7 +156,6 @@ body{
         margin-right: 0;
     }
 }
-
 .alignwide, .container--main > div:not(.alignfull):not(.alignwide){
     width: 100%;
     max-width: var(--width-wide);
@@ -503,7 +468,6 @@ body{
     margin-top: calc(var(--space-margin-tb) * -1 + var(--space-gap));
 }
 
-
 /* -- columns -- */
 .wp-block-columns {
     margin-bottom: 0; /*overrides default gutenberg*/
@@ -527,8 +491,4 @@ body{
 .wp-block-gallery.alignfull{
     padding-top: var(--space-gap-small);
     padding-bottom: var(--space-gap-small);
-}
-.wp-block-gallery.alignfull.slider{
-    padding-top: calc(var(--space-gap-small)/2);
-    padding-bottom: calc(var(--space-gap-small)/2);
 }
